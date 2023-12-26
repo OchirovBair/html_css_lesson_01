@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Lato, sans-serif;
+    font-family: Rubik, sans-serif;
     font-style: normal;
     line-height: normal;
 }
@@ -17,6 +17,9 @@ ul {
 section {
     background-color: #EFF2F9;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -25,25 +28,49 @@ section {
     background: #FFF;
     box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25);
     padding: 60px 0px 70px;
+    display: flex;
 }
 
 .product-image-block {
-    width: 540px;
+    min-width: 540px;
     border-right: 2px solid rgba(20, 20, 20, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.img-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
 }
 
 .preview {
     width: 80px;
     height: 80px;
     background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
-.preview.selected {
+.preview.selected,
+.preview:hover {
     box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
 }
 
 .product-info-block {
     padding: 0 60px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-title {
@@ -61,11 +88,11 @@ section {
     font-weight: 400;
     letter-spacing: 0.16px;
     margin-bottom: 60px;
+    font-family: Lato;
 }
 
 .text {
     color: rgba(20, 20, 20, 0.70);
-    font-family: Rubik;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
@@ -85,6 +112,13 @@ section {
     text-transform: uppercase;
     margin-bottom: 20px;
     margin-bottom: 20px;
+    font-family: Lato;
+}
+
+.colors-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .circle {
@@ -114,18 +148,31 @@ section {
     background-color: #F2C723;
 }
 
-li.selected {
+li {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     padding: 7px;
-    filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
+    cursor: pointer;
+    transition: all .2s;
+}
+
+li.selected,
+li:hover {
+    box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
+}
+
+.cta-wrapper {
+    display: flex;
+}
+
+.cta-wrapper > div {
+    flex-grow: 1;
 }
 
 .quantity {
     width: 80px;
     color: rgba(20, 20, 20, 0.80);
-    font-family: Rubik;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -135,11 +182,12 @@ li.selected {
     background-image: url(./assets/images/ph_caret-down-bold.svg);
     background-repeat: no-repeat;
     background-position: right 0 top 50%;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .price {
     color: rgba(20, 20, 20, 0.80);
-    font-family: Rubik;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.2px;
@@ -148,14 +196,18 @@ li.selected {
 
 .btn {
     color: #FFF;
-    font-family: Rubik;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.18px;
-
     width: 100%;
     height: 70px;
     background-color: #141414;
-
     margin-top: 75px;
+    transition: 1s;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
 }
