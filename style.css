@@ -9,6 +9,7 @@ body {
     font-style: normal;
     line-height: normal;
     min-width: 375px;
+    transition: .5s ease-in-out;
 }
 
 ul {
@@ -235,7 +236,7 @@ li:hover {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media  and (max-width: 576px) {
     .card {
         margin: 15px;
     }
