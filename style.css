@@ -28,8 +28,8 @@ section {
     width: 1170px;
     min-height: 800px;
     background: #FFF;
-    box-shadow: 20px 20px 40px 0px rgba(81, 91, 117, 0.25);
-    padding: 60px 0px 70px;
+    box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
+    padding: 60px 0 70px;
     display: flex;
 }
 
@@ -66,7 +66,7 @@ section {
 
 .preview.selected,
 .preview:hover {
-    box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
+    box-shadow: 8px 8px 16px 0 rgba(81, 91, 117, 0.25);
 }
 
 .product-info-block {
@@ -77,7 +77,7 @@ section {
 
 .main-title {
     color: rgba(20, 20, 20, 0.90);
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-size: 38px;
     font-weight: 700;
     letter-spacing: 0.38px;
@@ -90,7 +90,7 @@ section {
     font-weight: 400;
     letter-spacing: 0.16px;
     margin-bottom: 60px;
-    font-family: Lato;
+    font-family: 'Lato';
 }
 
 .text {
@@ -113,8 +113,7 @@ section {
     letter-spacing: 0.16px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    margin-bottom: 20px;
-    font-family: Lato;
+    font-family: 'Lato';
 }
 
 .colors-list {
@@ -161,7 +160,7 @@ li {
 
 li.selected,
 li:hover {
-    box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
+    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
 }
 
 .cta-wrapper {
@@ -236,7 +235,7 @@ li:hover {
     }
 }
 
-@media  and (max-width: 576px) {
+@media  screen and (max-width: 576px) {
     .card {
         margin: 15px;
     }
